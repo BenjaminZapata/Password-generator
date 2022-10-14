@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&display=swap');
+
+:root{
+  --gray: rgb(50, 50, 50);
+  --light-gray: rgb(230, 230, 230);
+  --white: rgb(240,240,240);
+}
+
+.App {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap: 1em;
+  font-family: 'Inconsolata', monospace;
+  h1{
+    float: left;
+    font-size: 2em;
+    width: 80%;
+    min-width: 375px;
+    max-width: 600px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  header{
+    width: 80%;
+    min-width: 375px;
+    max-width: 600px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25em;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #1a6dff,#b22cff) 1;
+    box-shadow: 5px 5px 10px var(--gray);
+    p{
+      overflow: hidden;
+      font-size: 1.5em;
+    }
+    button{
+      img{
+        width: 50px;
+        transition: .1s all linear;
+        &:hover{
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+  footer{
+    width: 80%;
+    min-width: 375px;
+    max-width: 600px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 2em 3em;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #1a6dff,#b22cff) 1;
+    box-shadow: 5px 5px 10px var(--gray);
+    div{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      label{
+        display: block;
+      }
+    }
+  }
+  .generate{
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #1a6dff,#b22cff) 1;
+    width: 50%;
+    min-width: 185px;
+    align-self: center;
+    padding: .75em 1em;
+    transition: .15s all linear;
+    &:hover{
+      background-color: var(--light-gray);
+      transform: translate(2px, 2px);
+    }
+  }
+}
+
+@media screen and (min-width: 530px){
+  *{
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 530px){
+  *{
+    font-size: 14px;
+  }
+  .App{
+    .title{
+      font-size: 1.25em;
+    }
+  }
+}
+@media screen and (max-width: 375px){
+  *{
+    font-size: 12px;
+  }
+  .App{
+    h1{
+      min-width: 300px;
+    }
+    header{
+      min-width: 300px;
+    }
+    footer{
+      min-width: 300px;
+    }
+  }
+}
